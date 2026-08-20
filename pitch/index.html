@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anomaly Hunters — Project Overview</title>
+<meta name="description" content="Anomaly Hunters — a co-op paranormal investigation sim where you don't identify a ghost, you solve the case behind it.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="progress" role="presentation"></div>
+
+<nav class="rail" aria-label="Slide navigation">
+  <a href="#cover"     aria-label="Cover"></a>
+  <a href="#what"      aria-label="What it is"></a>
+  <a href="#problem"   aria-label="The problem"></a>
+  <a href="#case"      aria-label="The case"></a>
+  <a href="#loop"      aria-label="The loop"></a>
+  <a href="#edge"      aria-label="Differentiators"></a>
+  <a href="#crew"      aria-label="Your crew"></a>
+  <a href="#setting"   aria-label="Setting"></a>
+  <a href="#market"    aria-label="Market"></a>
+  <a href="#money"     aria-label="Business model"></a>
+  <a href="#status"    aria-label="Build status"></a>
+  <a href="#close"     aria-label="Close"></a>
+</nav>
+
+<div class="counter"><b>01</b> / <i>12</i></div>
+
+
+<!-- ====================================================== 01 — COVER -->
+<section class="slide" id="cover">
+  <div class="slide__inner">
+    <div class="cover__frame">
+      <p class="cover__kicker">Bureau of Anomalous Incident &mdash; Project Overview</p>
+      <h1 class="cover__title">Anomaly<span>Hunters</span></h1>
+      <p class="cover__line">
+        A co-op paranormal investigation sim where you don&rsquo;t identify a ghost &mdash;
+        you <b>solve the case behind it</b>.
+      </p>
+      <div class="cover__meta">
+        <span>PC / Steam</span>
+        <span>Unreal Engine 5.8</span>
+        <span>Solo or 1&ndash;4 Co-op</span>
+        <span>Playable build in engine</span>
+      </div>
+    </div>
+  </div>
+  <p class="cover__hint"><kbd>&rarr;</kbd> or <kbd>Space</kbd> to advance</p>
+</section>
+
+
+<!-- ================================================== 02 — WHAT IT IS -->
+<section class="slide" id="what">
+  <p class="slide__tag"><b>02</b> &nbsp;What it is</p>
+  <div class="slide__inner">
+    <p class="eyebrow">The short version</p>
+    <h2 class="slide__title">A real investigation, <em>on a real clock</em>.</h2>
+    <p class="slide__lede">
+      You take a contract from the Bureau, travel to a haunted site, and work it the way an
+      investigator actually would. <b>Arrive at 6&nbsp;AM in daylight.</b> Survey the property. Place
+      and calibrate your equipment while you can still see. Then sit the night out from a van or tent
+      outside the building as something begins to answer your instruments.
+      <b>After 9&nbsp;PM, it can kill you.</b>
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="stat__value">1&ndash;4</p>
+        <p class="stat__label">Players &mdash; solo playable,<br>larger maps scale higher</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">20&ndash;45<span style="font-size:0.5em"> min</span></p>
+        <p class="stat__label">Per contract &mdash; up to ~2h<br>on multi-day jobs</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">3</p>
+        <p class="stat__label">Contract tiers:<br>confirm / case&nbsp;file / banish</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">UE&nbsp;5.8</p>
+        <p class="stat__label">Built and running,<br>not a design document</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================= 03 — THE PROBLEM -->
+<section class="slide" id="problem">
+  <p class="slide__tag"><b>03</b> &nbsp;The problem</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Why this genre burns out</p>
+    <h2 class="slide__title">Every ghost hunting game is <em>the same puzzle</em>.</h2>
+    <p class="slide__lede">
+      Phasmophobia, Demonologist, Ghost Watchers &mdash; read three instruments, match the numbers to a
+      wiki table, type the ghost&rsquo;s name. It is memorisable. And once it is memorised, the game
+      is over; what remains is friends messing about in a dark room.
+    </p>
+
+    <div class="versus">
+      <div class="versus__col">
+        <p class="versus__label">The genre today</p>
+        <p class="versus__quote">&ldquo;EMF 5 plus freezing plus writing &mdash; that&rsquo;s a Demon. Go.&rdquo;</p>
+        <ul>
+          <li>Arrive at night, dump all equipment on the floor in ninety seconds</li>
+          <li>The answer is a species name from a fixed table</li>
+          <li>The wiki finishes the game for the player in week one</li>
+          <li>Content updates only add rows to the same table</li>
+        </ul>
+      </div>
+      <div class="versus__col versus__col--ours">
+        <p class="versus__label">Anomaly Hunters</p>
+        <p class="versus__quote">&ldquo;The wage book says he was eleven months unpaid. The tank steps are worn. Photograph the register.&rdquo;</p>
+        <ul>
+          <li>A full daylight shift: survey, place, calibrate, read the house</li>
+          <li>The answer is a <b>history</b> &mdash; who, why, what binds, what releases</li>
+          <li>Nothing to memorise, because the story changes every case</li>
+          <li>Content updates are <b>new stories</b>, and stories don&rsquo;t spoil the old ones</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================== 04 — THE CASE MODEL -->
+<section class="slide" id="case">
+  <p class="slide__tag"><b>04</b> &nbsp;The core idea</p>
+  <div class="slide__inner">
+    <p class="eyebrow">The anti-wiki property</p>
+    <h2 class="slide__title">You investigate a case, <em>not a species</em>.</h2>
+    <p class="slide__lede">
+      Instruments tell you how <b>strong</b> a presence is, <b>that</b> something just happened, and
+      <b>which object or room it cares about</b>. They never name it. A photograph of a buried pot is a
+      lead &mdash; a photograph of that pot taken while the meter spiked is proof the pot matters.
+    </p>
+
+    <table class="casefile">
+      <thead>
+        <tr><th>Slot</th><th>The question</th><th>Worked example &mdash; Case 001, the Rajbari, 1911</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>Victim</th>  <td>Who is it?</td>               <td>Nabin Chandra Das, household tutor, d.&nbsp;1911</td></tr>
+        <tr><th>Cause</th>   <td>Why is it still here?</td>    <td>Drowned in the estate tank; body recovered, rites never performed</td></tr>
+        <tr><th>Binding</th> <td>What holds it here?</td>      <td>His spectacles, locked in the office chest ever since</td></tr>
+        <tr><th>Release</th> <td>What ends it?</td>            <td>Immersion at water, his name spoken, the spectacles released</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note-strip">
+      <b>Why this is the commercial argument.</b> A player can memorise an EMF table in an afternoon.
+      They cannot memorise a history that is different every case. The slots are structured picks, not
+      free text &mdash; so the game can verify a filed report with no AI and no language model anywhere
+      in the product.
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================================================== 05 — THE LOOP -->
+<section class="slide" id="loop">
+  <p class="slide__tag"><b>05</b> &nbsp;Core loop</p>
+  <div class="slide__inner">
+    <p class="eyebrow">One contract, start to finish</p>
+    <h2 class="slide__title">Daylight is <em>half the game</em>.</h2>
+
+    <div class="timeline">
+      <div class="phase phase--hub">
+        <p class="phase__clock">HQ</p>
+        <p class="phase__name">Bureau</p>
+        <p class="phase__desc">Walkable hub. Assemble the team, recruit a hunter at the personnel desk, take a case from a client NPC, buy gear and pick a base.</p>
+      </div>
+      <div class="phase phase--day">
+        <p class="phase__clock">06:00 &ndash; 17:00</p>
+        <p class="phase__name">The day shift</p>
+        <p class="phase__desc">Survey, place and calibrate equipment in full light. Find documents, objects and physical traces that only exist by day.</p>
+      </div>
+      <div class="phase phase--dusk">
+        <p class="phase__clock">17:00 &ndash; 21:00</p>
+        <p class="phase__name">First activity</p>
+        <p class="phase__desc">It starts answering. Evidence gathering at real but survivable risk. Ward your base room now, or don&rsquo;t.</p>
+      </div>
+      <div class="phase phase--night">
+        <p class="phase__clock">21:00 &rarr;</p>
+        <p class="phase__name">The haunting</p>
+        <p class="phase__desc">It hunts. It phases through walls but not iron. It can wear a teammate&rsquo;s face. Charms and mantras buy you one mistake.</p>
+      </div>
+      <div class="phase phase--out">
+        <p class="phase__clock">Extract</p>
+        <p class="phase__name">Bank it</p>
+        <p class="phase__desc">Return to base and extract. The only way to keep money, XP and everything in your pack.</p>
+      </div>
+    </div>
+
+    <p class="note-strip">
+      <b>Real stakes, unlike the genre standard.</b> Death removes that character for good &mdash; their
+      level, their gear and everything in the van go with them, and only the account-wide locker survives.
+      There is no quit-to-menu-and-keep-everything.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================= 06 — DIFFERENTIATORS -->
+<section class="slide" id="edge">
+  <p class="slide__tag"><b>06</b> &nbsp;Differentiators</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Four things nobody else has</p>
+    <h2 class="slide__title">Defensible, not cosmetic.</h2>
+
+    <div class="grid grid--4">
+      <article class="card">
+        <p class="card__num">01</p>
+        <h3 class="card__title">The real workflow</h3>
+        <p class="card__body">Designed by a working paranormal investigator. Daylight setup, baseline calibration, monitoring from outside the building. <b>Bad calibration means you miss real activity later.</b> No competitor models the day shift at all.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">02</p>
+        <h3 class="card__title">A case, not a name</h3>
+        <p class="card__body">Victim, cause, binding, release &mdash; recovered from documents you photograph, objects you find and rites you recognise. <b>The story differs every case even when the species does not.</b></p>
+      </article>
+      <article class="card">
+        <p class="card__num">03</p>
+        <h3 class="card__title">Consequence</h3>
+        <p class="card__body">A roster of named specialists you recruit and can permanently lose, extraction-only payouts, gear that genuinely goes. <b>The tension of an extraction shooter applied to a genre that has never had any.</b></p>
+      </article>
+      <article class="card">
+        <p class="card__num">04</p>
+        <h3 class="card__title">A new mythology</h3>
+        <p class="card__body">South Asian folklore, researched rather than borrowed. Iron, salt lines, sigils and mantras as working mechanics. <b>An entire continent of source material the genre has never touched.</b></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================================================== 07 — THE CREW -->
+<section class="slide" id="crew">
+  <p class="slide__tag"><b>07</b> &nbsp;Characters &amp; crew</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Who you send in</p>
+    <h2 class="slide__title">You don&rsquo;t play a slot. <em>You play someone who can die.</em></h2>
+    <p class="slide__lede">
+      A player keeps up to five hunters. Each one is <b>recruited with earned money</b> at the Bureau&rsquo;s
+      personnel desk, belongs to a class, and carries their own stats, level and service record. Your
+      teammates can see what class you brought &mdash; and nothing else about your roster. Deciding who
+      walks into the house is the first real decision of a contract.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="stat__value">5</p>
+        <p class="stat__label">Character slots<br>per account</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">6</p>
+        <p class="stat__label">Classes at launch,<br>each a data asset</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">50</p>
+        <p class="stat__label">Levels per character,<br>lost with them</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">1&ndash;4</p>
+        <p class="stat__label">Team size, chosen<br>before you host</p>
+      </div>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card">
+        <p class="card__num">01</p>
+        <h3 class="card__title">Specialists, not skins</h3>
+        <p class="card__body">Investigator, Technician, Occultist, Psychic, Medium, Tantrik &mdash; each with its own psychic power, strength and stamina, its own abilities and its own starting kit. <b>A team that brought no Medium works the case differently.</b></p>
+      </article>
+      <article class="card">
+        <p class="card__num">02</p>
+        <h3 class="card__title">Recruited, never respawned</h3>
+        <p class="card__body">A death removes that person from the roster and takes their gear and the van with them. The account locker survives, so a wipe costs a run rather than a save file &mdash; harsh enough to matter, never harsh enough to quit over.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">03</p>
+        <h3 class="card__title">Assembled at HQ</h3>
+        <p class="card__body">Set the team size, invite friends, then decide whether to open what&rsquo;s left to strangers &mdash; wait for a full crew, or take a short window and drive out with whoever turned up. Positional team voice throughout.</p>
+      </article>
+    </div>
+
+    <p class="note-strip">
+      <b>And it is a content seam.</b> A class is a data asset, so a new one ships like a case pack does.
+      Owning a class and recruiting one are deliberately separate steps: even a class from a paid pack
+      still costs earned in-game money every time you put someone in a slot.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================================================== 08 — THE SETTING -->
+<section class="slide" id="setting">
+  <p class="slide__tag"><b>08</b> &nbsp;Setting &amp; content</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Edition 1: India</p>
+    <h2 class="slide__title">Hauntings as <em>grief, not monsters</em>.</h2>
+    <p class="slide__lede">
+      A Bengali <i>rajbari</i>, a Tamil temple complex, a Goan colonial mansion. Bhoota, Pret,
+      Pishacha. Every case is written so the player finishes it feeling the haunting was the reasonable
+      response of someone who was wronged &mdash; and cover-ups happen because a family was frightened,
+      poor or ashamed, never because anyone was evil.
+    </p>
+
+    <div class="grid grid--3">
+      <article class="card">
+        <p class="card__num">Editions</p>
+        <h3 class="card__title">A four-region roadmap</h3>
+        <p class="card__body">Edition 1 ships India. Editions 2&ndash;4 expand across Southeast, East and South Asia &mdash; each a paid expansion with its own entities, locations and folklore rules.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">Story packs</p>
+        <h3 class="card__title">Content that ships cheap</h3>
+        <p class="card__body">A case is a data asset plus its props and audio, cooked into its own pack. <b>The core game never needs to know a pack exists</b> &mdash; which makes authored stories a low-cost, high-margin DLC unit.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">Generation</p>
+        <h3 class="card__title">Infinite plus authored</h3>
+        <p class="card__body">A generator builds coherent cases from fragment pools for endless play; hand-written cases carry the moments a generator can&rsquo;t. Both produce the same runtime structure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================================================== 09 — MARKET -->
+<section class="slide" id="market">
+  <p class="slide__tag"><b>09</b> &nbsp;Market</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Who buys this</p>
+    <h2 class="slide__title">A proven genre with <em>an unserved half</em>.</h2>
+    <p class="slide__lede">
+      Co-op ghost hunting is one of the most commercially durable indie categories of the last five
+      years. What it has never served is the player who wants the <b>investigation</b> rather than the
+      screaming &mdash; the sim audience, the folklore audience, and the very large lapsed audience who
+      finished the wiki and left.
+    </p>
+
+    <div class="grid grid--3">
+      <article class="card">
+        <p class="card__num">Core</p>
+        <h3 class="card__title">Co-op horror groups</h3>
+        <p class="card__body">Friend groups of 2&ndash;4 who want real division of labour &mdash; someone on the monitors, someone in the house &mdash; not four people holding the same torch.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">Adjacent</p>
+        <h3 class="card__title">Simulation &amp; detective players</h3>
+        <p class="card__body">The audience for slow, procedural, competence-driven games. Calibration, documentation and deduction are the appeal, not a friction to skip.</p>
+      </article>
+      <article class="card">
+        <p class="card__num">Underserved</p>
+        <h3 class="card__title">South Asia &amp; the diaspora</h3>
+        <p class="card__body">A rapidly growing PC market that has almost never seen its own folklore treated seriously in a game. This is a marketing asset as much as a design one.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ 10 — BUSINESS MODEL -->
+<section class="slide" id="money">
+  <p class="slide__tag"><b>10</b> &nbsp;Business model</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Premium, no pay-to-win</p>
+    <h2 class="slide__title">Sell the game. <em>Then sell more game.</em></h2>
+
+    <div class="price-rail">
+      <div class="price">
+        <p class="price__tier">Early Access</p>
+        <p class="price__amount">$14.99&ndash;16.99</p>
+        <p class="price__note">3&ndash;6 months, full co-op and all launch mechanics working.</p>
+      </div>
+      <div class="price">
+        <p class="price__tier">Full launch</p>
+        <p class="price__amount">$19.99</p>
+        <p class="price__note">Base game, Steam-first with regional pricing.</p>
+      </div>
+      <div class="price">
+        <p class="price__tier">Edition expansions</p>
+        <p class="price__amount">$24.99</p>
+        <p class="price__note">A new region: entities, locations, folklore, cases.</p>
+      </div>
+      <div class="price">
+        <p class="price__tier">Cosmetics, cases &amp; classes</p>
+        <p class="price__amount">$2.99&ndash;4.99</p>
+        <p class="price__note">Skins, terminal themes, authored case packs, playable character classes.</p>
+      </div>
+    </div>
+
+    <p class="pillar">
+      <small>The pillar we will not trade away</small>
+      In-game currency is <b>earned only</b> and can never be bought. Every mechanical item &mdash;
+      including the tent that carries more equipment &mdash; is bought with money the player earned on a
+      contract. A purchased class is no exception: buying it lets you <i>recruit</i> that specialist, and
+      each recruit still costs earned money. <b>It adds a character, never a shortcut.</b>
+    </p>
+
+    <p class="footnote">
+      Pricing is the current plan for a Steam-first release with regional pricing, and is not final
+      until the Early Access date is announced.
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================================================== 11 — STATUS -->
+<section class="slide" id="status">
+  <p class="slide__tag"><b>11</b> &nbsp;Where it stands</p>
+  <div class="slide__inner">
+    <p class="eyebrow">Solo developer, AI-assisted, Unreal Engine 5.8</p>
+    <h2 class="slide__title">Not a pitch deck. <em>A running build.</em></h2>
+
+    <ul class="status-list">
+      <li>
+        <span class="chip chip--live">Live</span>
+        <p><b>The contract loop closes, end to end.</b> A case is offered by an HQ client NPC, accepted, chosen at the van, run on site against a day limit, extracted for money and XP, settled back into a board where the clients you ignored have lost patience, and reported on a post-contract results screen.</p>
+      </li>
+      <li>
+        <span class="chip chip--live">Live</span>
+        <p><b>Economy and persistence reconcile</b> across a full round trip &mdash; carried gear, locker, shared van contents and payouts all balance, plus a courier resupply that delivers from your locker to the van mid-contract for a fee by weight.</p>
+      </li>
+      <li>
+        <span class="chip chip--live">Live</span>
+        <p><b>Characters and permadeath.</b> Five-slot roster, six classes, server-validated recruiting at the personnel desk, per-character levels and stats, and a death that settles at extraction and takes the character with it &mdash; driven through the real UI in engine.</p>
+      </li>
+      <li>
+        <span class="chip chip--live">Live</span>
+        <p><b>Multiplayer between two real clients</b> on separate accounts: lobby, start, travel into a shared session. Team size, friend invites, matchmaking with a fill window and positional voice are built and exercised; hosting no longer reloads the hub.</p>
+      </li>
+      <li>
+        <span class="chip chip--live">Live</span>
+        <p><b>Documentation pays.</b> The camera resolves a subject in frame, banks it at extraction, and pays a one-off discovery bounty the first time anyone on the account documents that subject &mdash; verified persisting across separate sessions.</p>
+      </li>
+      <li>
+        <span class="chip chip--built">Built</span>
+        <p><b>The case black box.</b> Victim, cause, binding and release behind a prerequisite graph of clues, produced identically by a fragment generator or a hand-written story, and <b>machine-checked for solvability at save and at cook &mdash; an unfinishable case cannot ship</b>. Case 001 is authored and validates.</p>
+      </li>
+      <li>
+        <span class="chip chip--built">Built</span>
+        <p><b>Goal-driven entity AI.</b> A StateTree ghost with a folklore-grounded day/night power curve, partial manifestation, binding to a cursed relic that moves the haunting when you move it, and haunt events on real physical props.</p>
+      </li>
+      <li>
+        <span class="chip chip--built">Built</span>
+        <p><b>Equipment, HUD and the world layer.</b> Handheld tools with real sensing, tool readouts, throwable and interactable props, doors, room lights and a mains breaker that darkens the whole house, tiered operations terminals, and the Bureau HQ hub.</p>
+      </li>
+      <li>
+        <span class="chip chip--pending">Next</span>
+        <p><b>Finishing the investigation layer</b> &mdash; the case file screen, the lore handbook that carries progression, and entity disposition, so that not every haunting is hostile and player behaviour moves it.</p>
+      </li>
+      <li>
+        <span class="chip chip--pending">Next</span>
+        <p><b>Content to launch</b> &mdash; two further launch entities, class abilities and character art, final location art, and polish. Roadmap targets 16&ndash;18 months to full launch, with Early Access ahead of it.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===================================================== 12 — CLOSE -->
+<section class="slide" id="close">
+  <p class="slide__tag"><b>12</b> &nbsp;In one line</p>
+  <div class="slide__inner">
+    <div class="cover__frame">
+      <p class="cover__kicker">Anomaly Hunters</p>
+      <h2 class="cover__title">Every other ghost game<span>ends at the wiki.</span></h2>
+      <p class="cover__line">
+        Ours can&rsquo;t &mdash; because the answer was never a name.
+        It was <b>a person, and what was done to them</b>.
+      </p>
+      <div class="cover__meta">
+        <span>PC / Steam</span>
+        <span>Unreal Engine 5.8</span>
+        <span>Early Access target: $14.99&ndash;16.99</span>
+      </div>
+      <p class="footnote">
+        Anomaly Hunters is in active development. Everything described here is either running in the
+        build today or named as remaining work on slide 11 &mdash; nothing on these pages is a
+        target we have not started. <b>Current to 20 August 2026.</b>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/deck.js"></script>
+</body>
+</html>

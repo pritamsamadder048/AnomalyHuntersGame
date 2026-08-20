@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Anomaly Hunters - site stylesheet (landing and document pages)
+   Same Bureau field-terminal look as the deck, but standalone: styles.css is
+   kept byte-identical to the copy in the game repo so it can be re-synced
+   without a merge, which is why the tokens below are repeated rather than
+   imported. No external assets.
+   ========================================================================== */
+
+:root {
+  --ink-900: #08090b;
+  --ink-800: #0d0f12;
+  --ink-700: #14171c;
+  --ink-500: #262b34;
+
+  --paper:      #e9e5dc;
+  --paper-dim:  #a8a49b;
+  --paper-mute: #6f6c66;
+
+  --amber:      #e8a33d;
+  --amber-hot:  #ffc76b;
+  --amber-deep: #8a5f1c;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "JetBrains Mono", Consolas, "Liberation Mono", monospace;
+
+  --gutter: clamp(1.75rem, 5vw, 6rem);
+  --page-max: 62rem;
+  --rule: 1px solid rgba(233, 229, 220, 0.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.94rem + 0.2vw, 1.09rem);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The faint scanline wash the deck uses, so the two pages feel like one site. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.012) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.12; }
+p  { margin: 0 0 1em; }
+ul { margin: 0; padding: 0; list-style: none; }
+a  { color: inherit; }
+
+.wrap {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 9vh, 7rem) var(--gutter) 4rem;
+}
+
+/* --- masthead ------------------------------------------------------------ */
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--paper-mute);
+  margin-bottom: 1.6rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.9rem, 1.6rem + 5.4vw, 5.6rem);
+  letter-spacing: -0.015em;
+  margin-bottom: 1.4rem;
+}
+.title span { display: block; color: var(--amber); }
+
+.lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.6rem);
+  line-height: 1.45;
+  color: var(--paper-dim);
+  max-width: 40ch;
+  margin-bottom: 2.2rem;
+}
+.lede b { color: var(--amber-hot); font-weight: 600; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--paper-mute);
+  padding-bottom: 3.5rem;
+  border-bottom: var(--rule);
+}
+.meta span { white-space: nowrap; }
+.meta span::before { content: "\25B8  "; color: var(--amber-deep); }
+
+/* --- document index ------------------------------------------------------ */
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 3.5rem 0 1.5rem;
+}
+
+.docs li + li { margin-top: 1px; }
+
+.doc {
+  display: block;
+  text-decoration: none;
+  background: var(--ink-800);
+  border-left: 2px solid var(--ink-500);
+  padding: 1.5rem 1.7rem;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+.doc:hover, .doc:focus-visible {
+  background: var(--ink-700);
+  border-left-color: var(--amber);
+  outline: none;
+}
+
+.doc__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.doc__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--paper);
+}
+.doc__meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-mute);
+}
+.doc__body {
+  margin: 0.5rem 0 0;
+  color: var(--paper-dim);
+  font-size: 0.94em;
+  max-width: 62ch;
+}
+.doc:hover .doc__title { color: var(--amber-hot); }
+
+.pending {
+  background: transparent;
+  border: 1px dashed rgba(233, 229, 220, 0.13);
+  padding: 1.4rem 1.7rem;
+  color: var(--paper-mute);
+  font-size: 0.92em;
+  margin-top: 1px;
+}
+
+/* --- footer -------------------------------------------------------------- */
+
+.foot {
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  border-top: var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  color: var(--paper-mute);
+  line-height: 1.9;
+}
+.foot a { color: var(--paper-dim); text-decoration: none; border-bottom: 1px solid var(--amber-deep); }
+.foot a:hover { color: var(--amber-hot); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
